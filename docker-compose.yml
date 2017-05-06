@@ -1,0 +1,17 @@
+version: '2'
+services:
+  app:
+    build: .
+    command: /bin/bash
+    volumes:
+    - .:/app
+  hello:
+    build: .
+    command: python ./code/hello-world.py
+    volumes:
+    - .:/app
+  count:
+    build: .
+    command: python ./code/count.py
+    volumes:
+    - .:/app
